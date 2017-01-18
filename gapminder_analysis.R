@@ -3,6 +3,7 @@
 #Author Nadine Kotlarz
 
 download.file("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv", destfile = "gapminder-FiveYearData.csv")
+#Read in data file
 gapminder <- read.csv("gapminder-FiveYearData.csv")
 head(gapminder)
 tail(gapminder)
@@ -12,3 +13,4 @@ ggplot(data=gapminder, aes(x=year, y=lifeExp, color=continent)) + geom_point() +
 
 #save plot, defaults to save the last plot made
 ggsave(filename="year_vs_lifexp_percont.png", width = 5, height = 4, units= "in")
+
